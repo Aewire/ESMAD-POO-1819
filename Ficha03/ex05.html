@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex05</title>
+</head>
+<body>
+    <form id="frmGame">
+        <label for="txtGameName">Nome do Jogo</label>  <!--vinculei o id da caixa de texto ao label.-->
+        <input id= "txtGameName" type="text" required >
+        <br>
+        <!-- ano do jogo -->
+        <label for="txtGameYear">Ano do Jogo</label >  <!--vinculei o id da caixa de texto ao label.-->
+        <input id= "txtGameYear" type="text" required>
+        <br>
+        <!-- genero do jogo -->
+        <label for="txtGameGenre">Género do Jogo</label>  <!--vinculei o id da caixa de texto ao label.-->
+        <select name="" id="">
+            <option value="acao">Acao</option>
+            <option value="desporto" selected>Desporto</option>
+            <option value="estrategia">Estrategia</option>
+            <option value="aventura">Aventura</option>
+            <option value="simulacao">Simulacao</option>
+            <option value="terror">Terror</option>
+            
+        </select>
+        <br>
+        <label for="txtGameCover">Capa do Jogo</label>  <!--vinculei o id da caixa de texto ao label.-->
+        <input id= "txtGameCover" type="url" required>
+        <br>
+        <input type="submit" value="Adicionar">
+        <input type="reset" value ="Repor">
+        
+    </form>
+    <hr>
+    <table>
+        <tr>
+            <th>Ano</th>
+            <th>Genero</th> 
+            <th>Capa</th>  
+            <th>Opcoes</th> 
+        </tr>
+    </table>
+
+    <script src="ex05.js"></script>
+</body>
+</html>
