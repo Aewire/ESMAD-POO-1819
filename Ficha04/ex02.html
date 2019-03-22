@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*2. Objetos (ficheiro ex2.html)
+a. Considere o próximo objeto literal:*/
+const student = {
+name: "David Silva",
+course: "POO",
+grade: 12
+}
+
+//b.Crie uma função para listar os nomes das propriedades do objeto
+
+function listObjectNames(){
+    for (const key in student) {
+        console.log(key)
+        console.log(student[key])
+        
+            
+        }
+    }
+listObjectNames()
+
+//c. Crie uma função que remova a propriedade grade do objeto. Imprima o objeto antese depois de remover a propriedade
+
+function removePropGrade(){
+    delete student.grade
+}
+listObjectNames(
+
+    //d. Crie uma função que calcule o tamanho do objeto
+
+    function calcObjectSize(){
+        let count = 0
+        for (const key in student) {  //criei um contador, o ciclo for vai lendo e vai acrescentando 1 
+            count++
+
+        }
+        console.log(count)
+        
+    }
+    
+)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex04</title>
+</head>
+
+<body>
+    <script>
+        /*a. Escreva a função isEmpty(obj) que retorna true se o objeto não tiver propriedades,
+false caso contrário. Deve funcionar assim:*/
+
+        function isEmpty(object) {
+           for (let key in object) {
+               if (object.hasOwnProperty(key)) 
+               return false;                   
+               
+           }
+           return true;
+           
+        }
+        let schedule = {};
+            alert(isEmpty(schedule)); // true
+            schedule["8:30"] = "get up";
+            alert(isEmpty(schedule)); // false
+        
+    </script>
+</body>
+
+</html>
