@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <form id="frmMovie">
+                <label for="txtMovieName">Nome do Filme</label>  <!--vinculei o id da caixa de texto ao label.-->
+                <input id= "txtMovieName" type="text" required >
+                <br>
+               <br> 
+                <!-- ano do jogo -->
+                <label for="txtMovieYear">Ano do Filme</label >  <!--vinculei o id da caixa de texto ao label.-->
+                <input id= "txtMovieYear" type="number" min="1900" max="2019" required>
+                <br>
+                <br>
+                <!-- genero do jogo -->
+                <label for="txtMovieGenre">Género do Filme</label>  <!--vinculei o id da caixa de texto ao label.-->
+                <select name="txtMovieGenre" id="txtMovieGenre" required>
+                    <option value="açao">Acao</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="comédia">Comédia</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="terror">Terror</option>
+                    <option value="outro">Outro</option>
+                    
+                </select>
+                <br>
+                <br>
+                
+                <label for="txtMovieCover">Capa do Filme</label>  <!--vinculei o id da caixa de texto ao label.-->
+                <input id= "txtMovieCover" type="url" name="Cover" value="" >
+                <br>
+                <br>
+                <label for="txtMovieTrailer">Trailer do Filme</label>                
+                <input id= "txtMovieTrailer" type="url" name="Trailer" value="" >
+                <br>
+                <br>
+               <input type="submit" value="Adicionar">
+                <input type="reset" value ="Repor">
+                <input class="txtMovieOptions" type="button" value="Opçoes">
+            </form>
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Ano</th>
+                    <th>Genero</th> 
+                    <th>Opções</th>
+                     
+                </tr>
+            </table>
+  <script src="ex07.js"> </script>
+</body>
+
+</html>

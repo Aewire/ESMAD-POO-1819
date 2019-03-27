@@ -1,10 +1,9 @@
 const frmGame = document.querySelector("#frmGame") //ou ("form")
 
-frmGame.addEventListener("submit", function(event){
+frmGame.addEventListener("submit", function (event) {
     const txtGameYear = document.querySelector("#txtGameYear").value
     const currentYear = new Date().getFullYear()
-    if(txtGameYear > 1950 && txtGameYear < currentYear )
-    {
+    if (txtGameYear > 1950 && txtGameYear < currentYear) {
         alert("Validaçao OK")
         addGameTable()
     } else {
@@ -13,7 +12,7 @@ frmGame.addEventListener("submit", function(event){
     event.preventDefault() //colocar um parametro na function em cima para poder fazer isto
 })
 
-function addGameTable(){
+function addGameTable() {
     const table = document.querySelector("table")
     const gameName = document.querySelector("#txtGameName")
     const gameYear = document.querySelector("#txtGameYear")
@@ -26,5 +25,8 @@ function addGameTable(){
         <td>${gameYear}</td>
         <td>${gameGenre}</td>
         <td><img src="${gameCover}/></td>
-        <td></td>`
+        <td></td>
+        
+        </tr>
+        `
 }

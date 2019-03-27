@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex07 stor</title>
+</head>
+
+<body>
+    <h1>VIDEOTECA</h1>
+    <!--Formulário para adição de filme-->
+    <form>
+        <label for="movieTitle">TITULO:</label>
+        <input id="movieTitle" type="text" required>
+
+        <label for="movieGenre">GÉNERO:</label>
+        <select id="movieGenre">
+            <option value="aventura">AVENTURA</option>
+            <option value="acao">AÇÃO</option>
+            <option value="comedia">COMÉDIA</option>
+            <option value="romance">ROMANCE</option>
+            <option value="terror">TERROR</option>
+            <option value="thriller">THRILLER</option>
+            <option value="outro">OUTRO</option>
+        </select>
+
+        <label for="movieYear">ANO:</label>
+        <input id="movieYear" type="number" min="1900" max="" required>
+
+        <label for="movieCover">CAPA:</label>
+        <input id="movieCover" type="url"
+            value='https://i.pinimg.com/originals/66/25/b4/6625b41f5b0f64766b161ddfa0fe0db7.jpg' required>
+
+        <label for="movieTrailer">TRAILER:</label>
+        <input id="movieTrailer" type="url" value='https://www.youtube.com/embed/WLKBOJ9jyQg'>
+
+        <input type="submit" value="ADICIONAR">
+        <input type="reset" value="REPOR">
+
+
+    </form>
+    <hr>
+    <!--Tabela para listagem dos filmes-->
+    <table>
+    </table>
+
+    <!--Janela modal para mostrar a capa-->
+    <dialog id="dialogCover">
+        <img id="imgCover" src="" alt="">
+        <br>
+        <button id="btnCloseCoverDialog">FECHAR</button>
+    </dialog>
+
+    <!--Janela modal para mostrar trailer-->
+
+    <dialog id="movieTrailer">
+        <iframe id="ifrTrailer" width="640" height="360" allow="autoplay"></iframe>
+        <br>
+        <button id="btnCloseTrailerDialog">FECHAR</button>
+    </dialog>
+    <script src="ex07stor.js"></script>
+</body>
+
+</html>

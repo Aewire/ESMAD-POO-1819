@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    /*5. Objetos (ficheiro ex5.html)
+a. Temos um objeto que armazena os salários de uma equipa:*/
+const salaries = {
+John: 100,
+Ann: 160,
+Pete: 130
+}
+/*Escreva o código para somar todos os salários e armazene na variável sum. Deve ser
+390 no exemplo acima. Se o objeto salaries estiver vazio, o resultado deve ser 0.*/
+ 
+
+function soma(salaries){
+    let sum = 0;
+    for (const key in salaries) {
+        sum += salaries[key];
+
+            
+        }
+        alert(sum);
+    }
+
+
+soma(salaries);
+    </script>
+</body>
+
+</html>
