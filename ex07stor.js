@@ -96,9 +96,10 @@ btnCloseCoverDialog.addEventListener("click", function () {
 
 // Função para mostrar o trailer do filme numa janela modal
 function showTrailerWindow(trailer) {
-    const movieTrailer = document.querySelector("#movieTrailer")
+    const movieTrailer = document.getElementById("#movieTrailer")
     const ifrTrailer = document.querySelector("#ifrTrailer")
     ifrTrailer.src = trailer + "?autoplay=1"
+    console.log(movieTrailer)
     movieTrailer.showModal()
 }
 

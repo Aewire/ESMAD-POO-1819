@@ -28,15 +28,15 @@ myForm.addEventListener("submit", function (event) {
             trailer: txtTrailer
 
         }
-        movies.push(newMovie)
+        movies.push(newMovie) //4.tou a meter o objecto newMovie no array Movies
 
-    }
+    }    
     renderTable()
     
     
 
-    //4.Guardar o objecto no array
-    movies.push(newMovie)
+   
+    
 
     //5.Exibir os filmes na tabela
 
