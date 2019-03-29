@@ -47,6 +47,6 @@ function age(){
  else{
     age = currentYear - birthday.year - 1;
  }
- alert("tens " + age + " anos" )
+ alert(`tens ${age} anos` )
 }
 age();
