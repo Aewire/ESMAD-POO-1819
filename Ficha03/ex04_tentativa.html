@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="myTextBox">
+    <input id="myButton" type="button" value="Clica-me">
+    <p id="myP"></p>
+    <script>
+        //a. Crie um botão com o texto “Clica-me”. Ao clicar no botão deve surgir uma caixa de 
+        //alerta com o texto “Olá Mundo!”. Para esta resolução use as 3 abordagens aprendidas: 
+        /* use as 3 abordagens aprendidas:
+i. Através de um atributo HTML
+ii. Através de uma propriedade DOM
+iii. Através da adição de um ouvinte (listener) */
+
+        const myTextBox = document.querySelector("#myTextBox")
+        const myButton = document.querySelector("#myButton")
+        const myP = document.querySelector("#myP")
+
+        /*  myButton.addEventListener("click", function () {
+             alert("Ola Mundo!")
+         }) */
+        /* Adicione ao ficheiro uma caixa de texto e um parágrafo. Crie um listener que vai
+        reproduzir o que for escrito na caixa de texto para o parágrafo. Altere o evento do
+        clique do botão para apresentar o nº de caracteres escrito
+         */
+
+        myTextBox.addEventListener("input", function () {
+            myP.innerHTML = myTextBox.value
+        })
+        myButton.addEventListener("click", function () {
+           console.log(myTextBox.value.length) //escrever sempre com minusculas os value e os length
+        })
+
+    </script>
+</body>
+
+</html>
