@@ -30,7 +30,7 @@
         function multiplyNumeric(obj) {  //esta funçao age como um "molde", o javascript vai descartar todas as funçoes primeiro, vai ler os objectos
         //e depois, como chamei em baixo a funçao para cada um dos objectos que eu escolhi, vai aplicar a funçao que eu escrevi para aquele objecto em especifico 
             let mult = 0;
-            for (const key in obj) {
+            for (const key in obj) { //
                 if (isNaN(obj[key]) /*vai ver se as keys dos objecto sao numeros ou nao*/ == false)
                 {
                    obj[key] = obj[key] * 2
