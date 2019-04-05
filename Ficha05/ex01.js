@@ -17,23 +17,24 @@ perímetros. */
 /**
  * this is a class to model a rectangle
  */
-class Rectangle {
+class Rectangle { //so pode rer u, construtor, se quiser mais que um tenho de criar static.
+    /*vai ser sempre chamado*/
     constructor(width = 2, height = 1) { //vai assumir estes valores se nao dissermos que valores as propriedades vao ter, como no myRectangle2
-        this.width = width
+        this.width = width //nao precisa de ter os mesmos nomes, é so pra ser mais facil.
         this.height = height
-        this._color = "#FFFFFF"
+        this._color = "#FFFFFF" //propriedade privada, nao quero alterar a cor fora. usar apenas o underscore dentro da class, nunca fora.
     }
 
     //property width
-    get width() {
-        return this._width
+    get width() {  //metodo get
+        return this._width //devolve o valor da propriedade privada de width
     }
 
-    set width(value) {
+    set width(value) { //metodo set
         this._width = value;
     }
     //property height
-    get height() {
+    get height() {  //
         return this._height
     }
 
@@ -43,27 +44,33 @@ class Rectangle {
 
     //property color
 
-    get color(){
+    get color() {
         return this._color
     }
-
-    getArea(){
+/**
+ * @returns devolve o valor da area do rectangulo
+ */
+    getArea() {
         return this._width * this._height
     }
-/**
- * @returns devolve o valor o perimetro do rectangulo usando as propriedades privadas estabelecidas
- */
-    getPerimeter(){
+    /**
+     * @returns devolve o valor o perimetro do rectangulo usando as propriedades privadas estabelecidas
+     */
+    getPerimeter() {
         return this._width * 2 + this._height * 2;
     }
 
-    getColor(){
+    getColor() {
         return this._color;
     }
 }
 
 
-const myRectangle = new Rectangle(10, 5)
+const myRectangle = new Rectangle(10, 5) //se tiver um construtor
+/* console.log(myRectangle.width) //vai chamar o metodo get.width
+console.log(myRectangle.height) //vai cahamar o metodo get.height
+myRectangle.width = 11 //esta a chamar o metodo set.width. */
+
 console.log(myRectangle.getArea())
 console.log(myRectangle.getPerimeter())
 console.log(myRectangle.getColor())
@@ -79,4 +86,3 @@ rectangles.push(myRectangle)
 rectangles.push(myRectangle2)
 
 console.table(rectangles)
-

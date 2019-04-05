@@ -29,9 +29,65 @@ carros que têm esse tipo de combustível
          this.deposit = deposit
          this.fuelType = fuelType
      }
+/**
+ * Metodo para Atualizar a cor de um carro
+ */
+updateCarColor(newColor){
+    this.color = newColor
+}
 
+/**
+ * Atualizar o depósito
+ */
+refuelCarDeposit(liters){
+    this.deposit += liters
+}
+/**
+ * Consumir depósito
+ */
+drive(nkms){
+    const x = nkms * 5 / 100 //numero de litros gastos dependendo dos kilometros percorridos. 
+    this.deposit = this.deposit - x
+}
  }
 
  const car1 = new Car ('Ford', '91-GH-15', 'verde', 40, 'Gasóleo')
  const car2 = new Car ('Opel', '23-AB-23', 'branco', 50, 'Gasolina')
- const car3 = new Car ('Nissan', '12-CX-45', 'preto', 22, 'Gasóleo')
+ const car3 = new Car ('Ford', '12-CX-45', 'preto', 22, 'Gasóleo')
+ 
+ console.log(car1.color)
+ car1.updateCarColor('rosa')
+ console.log(car1.color)
+
+ //adicionar 3 objectos a um array
+ const cars = []
+ cars.push(car1)
+ cars.push(car2)
+ cars.push(car3)
+
+
+console.log(getCarNumberByBrand('Ford'))
+console.log(getCarDepositByFuelType('Gasóleo'))
+//i. uma função que devolva o nº de carros de uma determinada marca passada como parâmetro.
+function getCarNumberByBrand(brand) {
+    let cont = 0
+    for (const car of cars) {  
+
+        if(car.brand === brand){
+            cont++
+        }
+    }
+    return cont //devolve o valor para o console.log. sem isto o resultado aparecia undefined.
+}
+
+function getCarDepositByFuelType(fuelType) {
+    let sum = 0
+    for (const car of cars) {  
+
+        if(car.fuelType === fuelType){
+            sum += car.deposit
+        }
+    }
+    return sum
+}
+
