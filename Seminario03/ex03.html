@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex3</title>
+</head>
+
+<body>
+    <!-- Set a database movie for users storing their names, favorites titles and scores -->
+
+    nome: <input type="text" id="txtName">
+    <br>
+    filme: <input type="text" id="txtMovie">
+    <br>
+    score: <input type="text" id="txtScore">
+    <br>
+
+    <button>Add</button>
+
+    <script>
+    const btnAdd = document.querySelector("button")
+    btnAdd.addEventListener("click", function(){
+        const txtName = document.querySelector("#txtName")
+        const txtMovie = document.querySelector("#txtMovie")
+        const txtScore = document.querySelector("#txtScore")
+
+
+        let myMovies = []
+
+        if(localStorage.getItem(txtName.value)){
+            myMovies = JSON.parse(localStorage.getItem(txtName.value))
+        }
+        myMovies.push(
+            {
+                movie:txtMovie.value,
+                score:txtScore.value
+            }
+        )
+
+        localStorage.setItem(txtName.value, JSON.stringify(myMovies))
+    })
+    
+    </script>
+
+</body>
+
+</html>

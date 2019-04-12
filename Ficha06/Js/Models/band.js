@@ -30,13 +30,25 @@ Notas:
  * Classe que vai modelar uma banda de musica
  */
 export default class Band {
-    constructor(name, genre, photo, info, video) {
+    constructor(name, genre, photo, description, video) {
 
         this.name = name
-        this.genre = genre        
+        this.genre = genre
         this.photo = photo
-        this.info = info
+        this.description = description
         this.video = video
+    }
+
+    /* provisorio, nao sei se ta certo */
+    static compare(bandA, bandB) {
+
+        if (bandA.name < bandB.name) {
+            return -1
+        }
+        if (bandA.name > bandB.name) {
+            return 1
+        }
+        return 0
     }
 }
 /* const myBand = new Band("Imagine Dragons", "Pop/Rock", 2008, 4, US,

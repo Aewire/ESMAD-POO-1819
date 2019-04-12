@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex 02</title>
+</head>
+<body>
+    <!-- Store the background color of a page selected by user -->
+    <input type="color" name="" id="">
+    <button>Select</button>
+
+    <script>
+    const btnSelect =document.querySelector("button")
+    const txtColor = document.querySelector("input")
+
+    if(localStorage.getItem("color")){
+        document.querySelector("body").style.backgroundColor = localStorage.getItem("color")
+    }
+
+    btnSelect.addEventListener("click", function(){
+        localStorage.setItem("color", txtColor.value)
+        document.querySelector("body").style.backgroundColor = txtColor.value
+    })
+    
+    </script>
+</body>
+</html>
