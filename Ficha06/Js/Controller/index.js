@@ -4,6 +4,7 @@ import {
 
 const myCatalog = document.querySelector("#myCatalog")
 const btnFilter = document.querySelector("#btnFilter")
+const btnsRemove = document.getElementsByClassName("remove")
 
 btnFilter.addEventListener("click", function () {
     const txtName = document.querySelector("#txtName").value
@@ -22,9 +23,8 @@ function renderCatalog(txtName = "", sltGenre = "") {
     let i = 0
     for (const band of bands) {
         if (
-            (sltGenre !== "" && band.genre !==sltGenre)
-            ||
-            (txtName !=="" && !band.name.startsWith(txtName))  //se o nome da banda nao iniciar com o txtName
+            (sltGenre !== "" && band.genre !== sltGenre) ||
+            (txtName !== "" && !band.name.startsWith(txtName)) //se o nome da banda nao iniciar com o txtName
 
         ) {
             continue
@@ -52,8 +52,28 @@ function renderCatalog(txtName = "", sltGenre = "") {
         if (i % 3 === 0) {
             result += `</div>`
         }
-       
-    } myCatalog.innerHTML = result
-}
 
-const btnsRemove = document.getElementsByClassName("remove")
+    }
+
+    //associar a funçao ver mais ao botao ver mais 
+    const btnView = document.getElementsByClassName("view")
+
+    for (const button of btnView) {
+        button.addEventListener("click", function(){
+            viewCurrentBand(this.id)            
+        })        
+    }
+
+    //associar a funcao removar ao butao remover
+    const btnRemove = document.getElementsByClassName("remove")
+    for (const button of btnRemove) {
+        button.addEventListener("click", function(){
+            removeCurrentBand(this.id)
+        })
+        
+    }
+
+
+
+    myCatalog.innerHTML = result
+}
